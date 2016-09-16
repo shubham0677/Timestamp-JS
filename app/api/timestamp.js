@@ -11,7 +11,7 @@ module.exports = function(app) {
 			natural = unixToNat(unix);
 		} 
 
-		if(isNaN(+date) && 
+		else if(isNaN(+date) && 
 				moment(date,"MMMM D, YYYY").isValid()) {
 			unix = natToUnix(date);
 			natural = unixToNat(unix);		
@@ -25,6 +25,6 @@ module.exports = function(app) {
 	}
 
 	function natToUnix(date) {
-		return moment(date,"DDDD M, YYYY").format("X");
+		return moment(date,"MMMM D, YYYY").format("X");
 	}
 };
