@@ -16,7 +16,7 @@ module.exports = function(app) {
 			unix = natToUnix(date);
 			natural = unixToNat(unix);		
 		}	
-		var obj = {"unix" : unix, "natural" : nat};		
+		var obj = {"unix" : unix, "natural" : natural};		
 		resp.send(JSON.stringify(obj));
 	});
 
