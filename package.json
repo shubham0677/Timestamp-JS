@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/shubham0677/Timestamp-Microservice/issues"
   },
-  "homepage": "https://github.com/shubham0677/Timestamp-Microservice#readme"
+  "homepage": "https://github.com/shubham0677/Timestamp-Microservice#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "moment": "^2.15.0"
+  }
 }
