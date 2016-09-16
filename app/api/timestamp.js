@@ -8,8 +8,10 @@ module.exports = function(app) {
 		
 		if(+date >= 0) {
 			unix = +date;
-			natural = unixToNat(+date);
-		} else if(isNaN(+date) && 
+			natural = unixToNat(unix);
+		} 
+
+		if(isNaN(+date) && 
 				moment(date,"MMMM D, YYYY").isValid()) {
 			unix = natToUnix(date);
 			natural = unixToNat(unix);		
@@ -18,7 +20,7 @@ module.exports = function(app) {
 		resp.send(JSON.stringify(obj));
 	});
 
-	function unixToNat(date) {
+	function unixToNat(unix) {
 		return moment.unix(unix).format("MMMM D, YYYY");
 	}
 
